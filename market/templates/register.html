@@ -1,0 +1,34 @@
+{%   extends 'base.html' %}
+
+{% block title%} Register {% endblock %}
+
+{% block content %}
+<section class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" id="formValue">
+            <img id="registerImg" class="mb-4" src="https://www.pngkey.com/png/detail/73-730394_admin-approved-user-registration-user-registration-icon-png.png" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br/>
+
+            {{ form.username.label() }}
+            {{ form.username(class="form-control mb-3", placeholder="Username") }}
+
+            {{ form.email.label() }}
+            {{ form.email(class="form-control mb-3", placeholder="Email Address") }}
+
+            {{ form.password1.label() }}
+            {{ form.password2(class="form-control mb-3", placeholder="Password") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control mb-3", placeholder="Confirm Password") }}
+
+            <br/>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    
+        </form>
+    </div>
+</section>
+
+{% endblock %}
